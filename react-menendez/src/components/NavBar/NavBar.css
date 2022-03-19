@@ -1,0 +1,43 @@
+.navDiv {
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+}
+
+.appLogo img{
+  float: left;
+  max-height: 80px;
+  padding: 10px;
+}
+
+.logoTitle {
+  color: white;
+  display: inline-block;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
