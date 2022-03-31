@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
 import ItemCount from './components/ItemCount/ItemCount'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <h2>Lo mejor en Comidas y Bebidas en menos de 15 minutos</h2>
+      <ItemListContainer greeting="Lo mejor en Comidas y Bebidas en menos de 15 minutos"/>
       <ItemCount initial={1} stock={10} onAdd={onAdd} />
     </>
   );

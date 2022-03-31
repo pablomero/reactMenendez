@@ -1,0 +1,16 @@
+.listItem {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.listItem img {
+  height: 200px;
+  max-width: 200px;
+  object-fit: contain;
+}

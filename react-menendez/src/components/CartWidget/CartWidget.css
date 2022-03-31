@@ -1,0 +1,19 @@
+.cartWidget {
+  align-items: center;
+  background-color: DarkKhaki;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+  max-height: 60px;
+}
+
+.cartWidget img {
+  display: inline-block;
+  height: 100%;
+}
+
+.cartCount {
+  font-size: 24px;
+  font-weight: bold;
+}
