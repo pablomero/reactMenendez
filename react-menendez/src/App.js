@@ -1,18 +1,20 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
-import ItemCount from './components/ItemCount/ItemCount'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-
-  const onAdd = (quantity) => {
-    console.log(quantity)
-  }
   return (
     <>
-      <NavBar />
-      <ItemListContainer greeting="Lo mejor en Comidas y Bebidas en menos de 15 minutos"/>
-      <ItemCount initial={1} stock={10} onAdd={onAdd} />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting="Lo mejor en Comidas y Bebidas en menos de 15 minutos"/>} />
+          <Route path='/category/:categoryId' element={<ItemListContainer greeting={'Lo mejor en Comidas y Bebidas en menos de 15 minutos'}/>} />
+          <Route path='/detail/:productId' element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
