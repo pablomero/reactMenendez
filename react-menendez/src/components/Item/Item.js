@@ -7,7 +7,7 @@ const Item = ( {id, name, img, price} ) => {
       <img src={img} alt='itemImg' />
       <p>{name}</p>
       <p>${price}</p>
-      <Link to={`detail/${id}`}>Detalle</Link>
+      <Link to={`/detail/${id}`}>Detalle</Link>
     </div>
   )
 }

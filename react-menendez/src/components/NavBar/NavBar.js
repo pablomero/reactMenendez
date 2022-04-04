@@ -1,28 +1,30 @@
 import './NavBar.css'
 import logo from './logo.png'
 import CartWidget from '../CartWidget/CartWidget'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <div className="navDiv">
-      <picture className="appLogo">
-        <img src={logo} alt='logo' />
-        <h1 className="logoTitle">Fast Food Fifteen</h1>
-      </picture>
+      <Link to='/'>
+        <picture className="appLogo">
+          <img src={logo} alt='logo' />
+          <h1 className="logoTitle">Fast Food Fifteen</h1>
+        </picture>
+      </Link>
       <nav>
         <ul>
           <li>
-           <Link to='/'>Inicio</Link>
+           <NavLink to='/'>Inicio</NavLink>
           </li>
           <li>
-           <Link to='category/comida'>Comidas</Link>
+           <NavLink to='category/comida'>Comidas</NavLink>
           </li>
           <li>
-           <Link to='category/bebida'>Bebidas</Link>
+           <NavLink to='category/bebida'>Bebidas</NavLink>
           </li>
           <li>
-           <Link to='category/combo'>Combos</Link>
+           <NavLink to='category/combo'>Combos</NavLink>
           </li>
         </ul>
       </nav>
