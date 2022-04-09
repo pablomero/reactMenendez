@@ -1,4 +1,5 @@
 import './ItemDetail.css';
+import './ItemCount'
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
@@ -9,6 +10,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         <p>{description}</p>
         <p>Stock: {stock} - Precio: ${price}</p>
       </div>
+      <ItemCount />
   )
 }
 
