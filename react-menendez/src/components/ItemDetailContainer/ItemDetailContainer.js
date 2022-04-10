@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getProductById } from '../../asyncmock'
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({addToCart, cart}) => {
     const [product, setProduct] = useState()
     const [loading, setLoading] = useState(true)
 
@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div className='ItemDetailContainer'>
-            <ItemDetail {...product}/>
+            <ItemDetail {...product} addToCart={addToCart} cart={cart}/>
 
         </div>
     )
