@@ -6,12 +6,13 @@ export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([])
 
     const addItem = (product, quantity) => {
+      if (!isInCart(product.id)) {
         const objItemCart = {
-            ...product,
-            quantity
+          ...product,
+          quantity
         }
-
         setCart([...cart, objItemCart ])
+      }
     }
 
     const clearCart = () => {
@@ -25,6 +26,10 @@ export const CartContextProvider = ({ children }) => {
         })
 
         return count
+    }
+
+    const isInCart = (id) => {
+      return cart.find(prod => prod.id === id )
     }
 
     return (

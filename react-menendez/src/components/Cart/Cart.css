@@ -1,0 +1,15 @@
+.cartItem {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.cartItem img {
+  height: 100px;
+  object-fit: contain;
+  width: 100px;
+}
+
+.cartItem p {
+  font-size: 18px;
+  margin: 10px;
+}

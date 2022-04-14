@@ -10,7 +10,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
   const handleOnAdd = (count) => {
     setQuantity(count)
-    addItem({ id, name, price }, count)
+    addItem({ id, name, img, price }, count)
   }
   return (
       <div className="itemDetail">
