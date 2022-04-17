@@ -2,8 +2,12 @@ import './NavBar.css'
 import logo from './logo.png'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import CartContext from '../../context/CartContext'
+
 
 const NavBar = () => {
+  const { getQuantity }  = useContext(CartContext)
   return (
     <div className="navDiv">
       <Link to='/'>
@@ -28,7 +32,7 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-      <CartWidget />
+      <CartWidget isEmpty={ getQuantity() == 0 } />
     </div>
   );
 

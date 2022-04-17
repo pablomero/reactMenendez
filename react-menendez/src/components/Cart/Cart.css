@@ -1,7 +1,11 @@
 .cartItem {
   align-items: center;
+  background-color: lightblue;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
+  margin: 10px;
+  padding: 10px;
 }
 .cartItem img {
   height: 100px;
@@ -12,4 +16,5 @@
 .cartItem p {
   font-size: 18px;
   margin: 10px;
+  width: 20%;
 }
