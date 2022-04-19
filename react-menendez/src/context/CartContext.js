@@ -29,7 +29,7 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const isInCart = (id) => {
-      return cart.find(prod => prod.id === id )
+      return cart.some(prod => prod.id === id )
     }
 
     const getTotal = () => {
@@ -52,6 +52,7 @@ export const CartContextProvider = ({ children }) => {
             addItem,
             clearCart,
             getQuantity,
+            isInCart,
             getTotal,
             removeItem
         }}>
