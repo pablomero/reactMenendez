@@ -1,4 +1,3 @@
-//import { getProducts } from '../../asyncmock'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
@@ -13,14 +12,6 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     setLoading(true)
-
-    // getProducts(categoryId).then(response => {
-    //   setProducts(response)
-    // }).catch(error => {
-    //   console.log(error)
-    // }).finally(() => {
-    //   setLoading(false)
-    // })
 
     const collectionRef = categoryId ?
       query(collection(firestoreDb, 'items'), where('category', '==', categoryId)) :
