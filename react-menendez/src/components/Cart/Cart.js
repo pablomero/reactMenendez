@@ -7,6 +7,7 @@ import { firestoreDb } from '../../services/firebase'
 
 const Cart = () => {
   const [loading, setLoading] = useState(false)
+  const [order, setOrder] = useState(false)
   const { cart, clearCart, getQuantity, getTotal, removeItem } = useContext(CartContext)
   const createOrder = () => {
     setLoading(true)
@@ -19,7 +20,6 @@ const Cart = () => {
       items: cart,
       total: getTotal()
     }
-
 
     const collectionRef = collection(firestoreDb, 'items')
     const ids = cart.map(prod => prod.id)
@@ -54,10 +54,20 @@ const Cart = () => {
       }
     }).finally(() => {
       setLoading(false)
+      setOrder(true)
     })
   }
   const handleRemove = (id) => {
     removeItem(id)
+  }
+
+  if(order) {
+    return <>
+      <h1>Orden completada</h1>
+      <p>Nombre: 'Juan Pablo',</p>
+      <p>Teléfono: '123456789',</p>
+      <p>Email: 'pablo@mail.com'</p>
+    </>
   }
 
   if(loading) {
