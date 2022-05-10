@@ -3,3 +3,5 @@ La idea sugió en base a aplicaciones similares que se suelen utilizar en distin
 Dentro de las categorias se separa por comestibles, bebidas y combos.
 
 No se instaló otra dependencia fuera de react-router-dom.
+
+Para inicializar el proyecto despues de clonar, utilizar el comando npm start dentro de la carpeta react-menendez y a continuación navegar a http://localhost:3000/
